@@ -1,8 +1,13 @@
+<p align="center">
+  <img width="150" src="https://github.com/utahstate/launchpad-python/blob/master/docs/assets/python-launchpad-log.png" alt="Python Launchpad logo">
+</p>
 
+<h1 align="center">Python Launchpad</h1>
 
-Must be connected to USU Staff VPN for instant-client image download from Harbor.
+A project starter for Python projects configured with common USU project dependencies and Visual Studio Code integrations to make development awesome.
 
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-Install Remote-Containers Extension for VSCode
+---
 
-https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+This README.md is intended to be overwritten with project documentation. For included features and instructions on use refer to the [Dev Container README](.devcontainer/README.md).
