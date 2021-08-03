@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="150" src="https://github.com/utahstate/launchpad-python/blob/master/docs/assets/python-launchpad-log.png" alt="Python Launchpad logo">
+  <img src="https://github.com/utahstate/launchpad-python/blob/master/docs/assets/python-launchpad-logo.png" alt="Python Launchpad logo">
 </p>
 
 <h1 align="center">Python Launchpad</h1>
