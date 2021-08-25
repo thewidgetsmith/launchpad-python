@@ -14,7 +14,7 @@ ARG UPGRADE_PACKAGES="true"
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your own dependencies.
 ARG USERNAME=vscode
-ARG USER_UID=1000
+ARG USER_UID=1099
 ARG USER_GID=$USER_UID
 
 # Run package updates/maintenance
