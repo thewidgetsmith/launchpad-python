@@ -1,40 +1,25 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/ubuntu
 {
-  "name": "Python3.9 InstantClient",
+  "name": "Python With InstantClient",
   "build": {
     "context": "..",
     "dockerfile": "Dockerfile",
+    // Change 'VARIANT' to pick use a specific Python version:
+    // Options are:
+    //  3.6-buster-slim
+    //  3.7-buster-slim
+    //  3.8-buster-slim
+    //  3.9-buster-slim
     "args": {
       "INSTALL_ZSH": "true",
       "UPGRADE_PACKAGES": "true",
       "VARIANT": "3.9-buster-slim"
     }
   },
-  // Set *default* container specific settings.json values on container create.
-  "settings": {
-    "python.pythonPath": "/usr/local/bin/python",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
-    "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
-    "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
-    "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
-    "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
-    "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
-    "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
-    "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-    "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
-  },
-  // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "aaron-bond.better-comments",
-    "eamodio.gitlens",
-    "formulahendry.code-runner",
-    "ms-python.python",
-    "ms-python.vscode-pylance"
-  ],
+  // Array of Docker CLI arguments for the development container.
+  //  `--env-file` specifies a file of environment variables
+  "runArgs": ["--env-file", ".env"],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [
   //   9000
@@ -53,5 +38,29 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "pip install -r requirements.txt",
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "eamodio.gitlens",
+    "formulahendry.code-runner",
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ],
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+    "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+    "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+    "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+    "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+    "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+    "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+    "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+    "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  },
 }

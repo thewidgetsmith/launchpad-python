@@ -1,8 +1,5 @@
-from dotenv import load_dotenv
 from flask import Flask
 import os
-
-load_dotenv()  # load environment variables from .env.
 
 app = Flask(__name__)
 

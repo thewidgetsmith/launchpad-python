@@ -7,12 +7,12 @@
 # Docs: https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/python.md
 # Maintainer: The VS Code and Codespaces Teams
 #
-# Syntax: ./python-debian.sh [Python Version] [Python intall path] [PIPX_HOME] [non-root user] [Update rc files flag] [install tools]
+# Syntax: ./python-debian.sh [Python intall path] [Python Version] [non-root user] [PIPX_HOME] [Update rc files flag] [install tools]
 
-PYTHON_VERSION=${1:-"latest"}
-PYTHON_INSTALL_PATH=${2:-"/usr/local/python"}
-export PIPX_HOME=${3:-"/usr/local/py-utils"}
-USERNAME=${4:-"automatic"}
+PYTHON_INSTALL_PATH=${1:-"/usr/local/python"}
+PYTHON_VERSION=${2:-"latest"}
+USERNAME=${3:-"automatic"}
+export PIPX_HOME=${4:-"/usr/local/py-utils"}
 UPDATE_RC=${5:-"true"}
 INSTALL_PYTHON_TOOLS=${6:-"true"}
 USE_PPA_IF_AVAILABLE=${7:-"true"}
