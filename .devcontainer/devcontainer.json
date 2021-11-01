@@ -7,14 +7,15 @@
     "dockerfile": "Dockerfile",
     // Change 'VARIANT' to pick use a specific Python version:
     // Options are:
-    //  3.6-buster-slim
-    //  3.7-buster-slim
-    //  3.8-buster-slim
-    //  3.9-buster-slim
+    //  3.6-bullseye-slim
+    //  3.7-bullseye-slim
+    //  3.8-bullseye-slim
+    //  3.9-bullseye-slim
+    //  3.10-bullseye-slim
     "args": {
       "INSTALL_ZSH": "true",
       "UPGRADE_PACKAGES": "true",
-      "VARIANT": "3.9-buster-slim"
+      "VARIANT": "3.10-bullseye-slim"
     }
   },
   // Array of Docker CLI arguments for the development container.

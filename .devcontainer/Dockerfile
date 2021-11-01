@@ -1,6 +1,6 @@
-# Python 3.9 Buster Slim with Oracle Instant Client
+# Python 3.10 Bullseye Slim with Oracle Instant Client
 # See here for image contents: https://harbor.usu.edu/harbor/projects/29/repositories/base-images%2Fpython-instantclient/tags/3.9-buster-slim
-ARG VARIANT="3.9-buster-slim"
+ARG VARIANT="3.10-bullseye-slim"
 FROM harbor.usu.edu/base-images/python-instantclient:${VARIANT}
 
 # Copy scripts to execute
